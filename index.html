@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div>
+                    <a href="#header"><img src="images/logo.jpg"  alt="logo" class="logo"></a>
+                </div>
+            <div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Sevices</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            </nav>
+            <div id="header-text">
+                <div class="text">
+                    <p>Full-Stack <br>Web Developer</p>
+                    <h1>Hi, I'm<span><br> Shail Pradhan</span><br> from Sikkim.</h1>
+                </div>
+                <div class="img">
+                    <img src="images/profile.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!------------about------------->
+
+
+    <div id="about">
+        <div class="container">
+            <div class="aboutme">
+                <h1 class="sub-title">About me</h1>
+                <br>
+                <p style="text-align: justify;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedturpis massa tincidunt dui ut ornare lectus sit. 
+                    Ac tincidunt vitae semper quis. Vestibulum sed arcu non odio euismod lacinia at. Odio morbi quis commodo odio 
+                    aenean. Volutpat consequat mauris nunc congue nisi vitae. Mattis pellentesque id nibh tortor. Vel facilisis volutpat est velit. Nullam eget felis eget nunc lobortis mattis aliquam faucibus. Accumsan lacus vel facilisis volutpat est velit. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Suspendisse in est ante in nibh mauris cursus mattis. Sit amet facilisis magna etiam tempor orci eu lobortis elementum. Nunc sed velit dignissim sodales ut. In tellus integer feugiat scelerisque. Aenean euismod elementum nisi quis eleifend quam.</p>
+                
+                <div class="tab-title">
+                    <p class="tab-link active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-link" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-link" onclick="opentab('Education')">Education</p>   
+                </div>
+                <div class="table-contents active-tab" id="Skills">
+                    <ul>
+                        <li><u><h3><span>Web Development</span></u></h3><br>Web App Development<br>Javascript | node.js | express.js | Html | CSS | react.js | MySQL | MongoDB | Bootstrap</li><br>
+                        <li><u><h3><span>Machine Learning</span></h3></u><br>Model Training & Development<br>Python | pandas | NumPy | PyTorch | Scikit-learn | TensorFlow</li><br>
+                        <li><u><h3><span>App development</span></h3></u><br>Andriod App development<br>Java</li>
+                    </ul>
+                </div>
+                <div class="table-contents" id="Experience">
+            
+                
+                </div>
+                <div class="table-contents" id="Education">
+                    <ul>
+                        <li><h3><span>B.Tech In Computer Science & Engineering (AI-ML)</span> <br>[2022-2026]</h3><br><b>Sikkim Manipal Institute of Technology, Sikkim</b><br></li><br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    
+    var tablelinks = document.getElementsByClassName("tab-link");
+    var tabcont = document.getElementsByClassName("table-contents");
+
+    function opentab(tabname){
+
+    for(tablelink of tablelinks){
+        tablelink.classList.remove("active-link");
+    }
+    for(tablecontent of tabcont){
+        tablecontent.classList.remove("active-tab");
+    
+    }
+    event.currentTarget.classList.add('active-link')
+    document.getElementById(tabname).classList.add('active-tab')
+}
+</script>
+    
+</body>
+</html>
